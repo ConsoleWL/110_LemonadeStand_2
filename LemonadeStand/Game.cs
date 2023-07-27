@@ -67,6 +67,11 @@ namespace LemonadeStand
             }
         }
 
+        public void DisplayPrices()
+        {
+            Console.WriteLine($"Lemon: $0.5  SugarCube: $0.10 IceCube: $0.01 Cup: $0.25");
+        }
+
         public void CustomerPurchase()
         {
             for (int i = 0; i < days[currentDay -1].customers.Count - 1; i++)
@@ -95,7 +100,7 @@ namespace LemonadeStand
         {
             Console.WriteLine($"\nToday weather was {days[currentDay - 1].weather.condition}, temperature {days[currentDay - 1].weather.temperature} ");
         }
-
+        
         public void DisplayProfitLoss()// hsould have Player player in here in case we have two players
         {
             Console.WriteLine($"\nDay {currentDay} is over! You sold {player.drinksSold} cups, which brought in ${player.drinksSold * player.recipe.price}");
@@ -115,6 +120,7 @@ namespace LemonadeStand
                 Console.WriteLine($"\nDay {currentDay} begins!");
 
                 player.DisplayInvetory();
+                DisplayPrices();
                 store.SellItems(player);
                 player.DisplayInvetory();
 

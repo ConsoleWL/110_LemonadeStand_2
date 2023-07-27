@@ -21,10 +21,10 @@ namespace LemonadeStand
             sugarCubes = new List<SugarCube>();
             iceCubes = new List<IceCube>();
             cups = new List<Cup>();
-            AddLemonsToInventory(100000);
-            AddSugarCubesToInventory(100000);
-            AddIceCubesToInventory(100000);
-            AddCupsToInventory(100000);
+            AddLemonsToInventory(0);
+            AddSugarCubesToInventory(0);
+            AddIceCubesToInventory(0);
+            AddCupsToInventory(0);
         }
 
         // member methods (CAN DO)

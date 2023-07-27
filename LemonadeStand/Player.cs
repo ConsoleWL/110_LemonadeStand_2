@@ -40,7 +40,7 @@ namespace LemonadeStand
         public void MakeAPitcher(int amountOfPitchers)
         {
             bool itemsAvailable = true;
-            
+
             int lemonsForPitcher = recipe.numberOfLemons * amountOfPitchers;
             int sugarForPitcher = recipe.numberOfSugarCubes * amountOfPitchers;
             int iceForPitcher = recipe.numberOfIceCubes * amountOfPitchers;
@@ -57,7 +57,7 @@ namespace LemonadeStand
                 Console.WriteLine($"You dont have enough items");
             }
 
-            if(itemsAvailable == true)
+            if (itemsAvailable == true)
             {
                 // 1 pitcher = 8 cups.
                 drinksAvailable = 8 * amountOfPitchers;
