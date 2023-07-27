@@ -27,6 +27,10 @@ namespace LemonadeStand
                         player.inventory.cups.RemoveAt(0);
                         player.wallet.AcceptMoney(recipe.price);
                     }
+                    else
+                    {
+                        Console.WriteLine("A customer walks by...");
+                    }
                 }
                 else if (recipe.price > 1 && recipe.price <3)
                 {
@@ -34,6 +38,10 @@ namespace LemonadeStand
                     {
                         player.inventory.cups.RemoveAt(0);
                         player.wallet.AcceptMoney(recipe.price);
+                    }
+                    else
+                    {
+                        Console.WriteLine("A customer walks by...");
                     }
                 }
                 else if (recipe.price >= 3)
@@ -43,7 +51,12 @@ namespace LemonadeStand
                         player.inventory.cups.RemoveAt(0);
                         player.wallet.AcceptMoney(recipe.price);
                     }
+                    else
+                    {
+                        Console.WriteLine("A customer walks by...");
+                    }
                 }
+                
             }
             else if (weather == "good")
             {
@@ -54,6 +67,10 @@ namespace LemonadeStand
                         player.inventory.cups.RemoveAt(0);
                         player.wallet.AcceptMoney(recipe.price);
                     }
+                    else
+                    {
+                        Console.WriteLine("A customer walks by...");
+                    }
                 }
                 else if (recipe.price > 1 && recipe.price < 3)
                 {
@@ -62,6 +79,10 @@ namespace LemonadeStand
                         player.inventory.cups.RemoveAt(0);
                         player.wallet.AcceptMoney(recipe.price);
                     }
+                    else
+                    {
+                        Console.WriteLine("A customer walks by...");
+                    }
                 }
                 else if (recipe.price >= 3)
                 {
@@ -69,6 +90,10 @@ namespace LemonadeStand
                     {
                         player.inventory.cups.RemoveAt(0);
                         player.wallet.AcceptMoney(recipe.price);
+                    }
+                    else
+                    {
+                        Console.WriteLine("A customer walks by...");
                     }
                 }
             }
@@ -81,6 +106,10 @@ namespace LemonadeStand
                         player.inventory.cups.RemoveAt(0);
                         player.wallet.AcceptMoney(recipe.price);
                     }
+                    else
+                    {
+                        Console.WriteLine("A customer walks by...");
+                    }
                 }
                 else if (recipe.price > 1 && recipe.price < 3)
                 {
@@ -89,6 +118,10 @@ namespace LemonadeStand
                         player.inventory.cups.RemoveAt(0);
                         player.wallet.AcceptMoney(recipe.price);
                     }
+                    else
+                    {
+                        Console.WriteLine("A customer walks by...");
+                    }
                 }
                 else if (recipe.price >= 3)
                 {
@@ -96,6 +129,10 @@ namespace LemonadeStand
                     {
                         player.inventory.cups.RemoveAt(0);
                         player.wallet.AcceptMoney(recipe.price);
+                    }
+                    else
+                    {
+                        Console.WriteLine("A customer walks by...");
                     }
                 }
             }

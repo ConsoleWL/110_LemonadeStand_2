@@ -29,9 +29,9 @@ namespace LemonadeStand
         //Member Methods (CAN DO)
         public void DisplayRecipe()
         {
-            Console.WriteLine($"Your recipe currently consists of:" +
-                $"\n{numberOfLemons} lemons per pitcher\n{numberOfSugarCubes} " +
-                $"sugar cubes per pitcher \n{numberOfIceCubes} ice cubes per pitcher");
+            Console.WriteLine($"\nYour recipe {name} price ${price} and consists " +
+                 $"of:\n{numberOfLemons} lemons per pitcher\n{numberOfSugarCubes} " +
+                 $"sugar cubes per pitcher\n{numberOfIceCubes} ice cubes per pitcher");
         }
 
         public void ChangeRecipe()

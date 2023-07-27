@@ -116,16 +116,18 @@ namespace LemonadeStand
                 store.SellItems(player);
                 player.DisplayInvetory();
 
+                days[currentDay - 1].weather.DisplayTemperature();
+
                 player.recipe.DisplayRecipe();
                 player.recipe.ChangeRecipe();
-
-                days[currentDay - 1].weather.DisplayTemperature();
 
                 player.MakeAPitcher(UserInterface.GetNumberOfPitchers());
 
                 WeatherChanger();
 
                 CustomerPurchase();
+
+                DisplayActualWether();
 
                 DisplayProfitLoss();
                 player.drinksAvailable = 0;

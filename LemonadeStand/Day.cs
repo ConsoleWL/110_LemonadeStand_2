@@ -15,6 +15,7 @@ namespace LemonadeStand
         {
             weather = new Weather();
             customers = new List<Customer>();
+            GenerateCustomers();
         }
 
         public void GenerateCustomers()
