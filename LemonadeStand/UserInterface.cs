@@ -40,5 +40,14 @@ namespace LemonadeStand
             return quantityOfItem;
         }
 
+        public static int GenerateRandom1to9()
+        {
+            Random rnd = new Random();
+            int number = rnd.Next(1, 10);
+            return number;
+        }
+
+        
+
     }
 }

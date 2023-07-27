@@ -13,8 +13,8 @@ namespace LemonadeStand
         public Wallet wallet;
         public Recipe recipe;
         string name;
-        int drinksAvailable;
-        int drinksSold;
+        internal int drinksAvailable;
+        internal int drinksSold;
 
         // constructor (SPAWNER)
         public Player()

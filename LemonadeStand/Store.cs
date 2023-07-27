@@ -24,6 +24,13 @@ namespace LemonadeStand
         }
 
         // member methods (CAN DO)
+        public void SellItems(Player players)
+        {
+            SellLemons(players);
+            SellSugarCubes(players);
+            SellIceCubes(players);
+            SellCups(players);
+        }
         public void SellLemons(Player player)
         {
             int lemonsToPurchase = UserInterface.GetNumberOfItems("lemons");

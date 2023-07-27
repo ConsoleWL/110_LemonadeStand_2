@@ -14,10 +14,91 @@ namespace LemonadeStand
             name = "Customer";
         }
 
-        public void Purchase(Player player, Recipe recipe ) // maybe add weather conditions
+        public void Purchase(Player player, Recipe recipe, string weather ) // maybe add weather conditions
         {
-            player.inventory.cups.RemoveAt(0);
-            player.wallet.AcceptMoney(recipe.price);
+            int number = UserInterface.GenerateRandom1to9();
+
+            if (weather  == "perfect")
+            {
+                if (recipe.price <= 1)
+                {
+                    if (number > 2)
+                    {
+                        player.inventory.cups.RemoveAt(0);
+                        player.wallet.AcceptMoney(recipe.price);
+                    }
+                }
+                else if (recipe.price > 1 && recipe.price <3)
+                {
+                    if (number > 3)
+                    {
+                        player.inventory.cups.RemoveAt(0);
+                        player.wallet.AcceptMoney(recipe.price);
+                    }
+                }
+                else if (recipe.price >= 3)
+                {
+                    if(number > 4)
+                    {
+                        player.inventory.cups.RemoveAt(0);
+                        player.wallet.AcceptMoney(recipe.price);
+                    }
+                }
+            }
+            else if (weather == "good")
+            {
+                if (recipe.price <= 1)
+                {
+                    if (number > 3)
+                    {
+                        player.inventory.cups.RemoveAt(0);
+                        player.wallet.AcceptMoney(recipe.price);
+                    }
+                }
+                else if (recipe.price > 1 && recipe.price < 3)
+                {
+                    if (number > 4)
+                    {
+                        player.inventory.cups.RemoveAt(0);
+                        player.wallet.AcceptMoney(recipe.price);
+                    }
+                }
+                else if (recipe.price >= 3)
+                {
+                    if (number > 5)
+                    {
+                        player.inventory.cups.RemoveAt(0);
+                        player.wallet.AcceptMoney(recipe.price);
+                    }
+                }
+            }
+            else // if weather is bad
+            {
+                if (recipe.price <= 1)
+                {
+                    if (number > 3)
+                    {
+                        player.inventory.cups.RemoveAt(0);
+                        player.wallet.AcceptMoney(recipe.price);
+                    }
+                }
+                else if (recipe.price > 1 && recipe.price < 3)
+                {
+                    if (number > 5)
+                    {
+                        player.inventory.cups.RemoveAt(0);
+                        player.wallet.AcceptMoney(recipe.price);
+                    }
+                }
+                else if (recipe.price >= 3)
+                {
+                    if (number > 6)
+                    {
+                        player.inventory.cups.RemoveAt(0);
+                        player.wallet.AcceptMoney(recipe.price);
+                    }
+                }
+            }
         }
     }
 }
