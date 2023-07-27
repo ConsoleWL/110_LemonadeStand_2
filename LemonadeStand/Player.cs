@@ -54,7 +54,7 @@ namespace LemonadeStand
             catch (Exception)
             {
                 itemsAvailable = false;
-                Console.WriteLine($"You dont have items");
+                Console.WriteLine($"You dont have enough items");
             }
 
             if(itemsAvailable == true)

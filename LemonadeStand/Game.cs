@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -20,6 +21,7 @@ namespace LemonadeStand
             store = new Store();
             days = new List<Day>
             {
+                new Day(),
                 new Day(),
                 new Day(),
                 new Day(),
@@ -108,6 +110,8 @@ namespace LemonadeStand
         {
             while(currentDay < 8)
             {
+                player.drinksSold = 0;
+
                 Console.WriteLine($"\nDay {currentDay} begins!");
 
                 player.DisplayInvetory();

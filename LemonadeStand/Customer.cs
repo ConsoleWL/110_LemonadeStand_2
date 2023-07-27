@@ -31,7 +31,7 @@ namespace LemonadeStand
                         }
                         else
                         {
-                            Console.WriteLine("A customer walks by...");
+                            Console.WriteLine("A custo0mer walks by...");
                         }
                     }
                     else if (recipe.price > 1 && recipe.price < 3)
