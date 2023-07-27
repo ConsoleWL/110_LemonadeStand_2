@@ -15,7 +15,6 @@ namespace LemonadeStand
         public double price;
         public string name;
 
-
         // constructor (SPAWNER)
         public Recipe()
         {
@@ -36,31 +35,103 @@ namespace LemonadeStand
 
         public void ChangeRecipe()
         {
-            Console.WriteLine("\nYou'd you like to change your recipe? Y/N");
-            string answer = Console.ReadLine();
-            if (answer == "Y")
+            string answer = "";
+            bool userInputIsAnInteger = false;
+            int quantityOfItem = -1;
+            while (true)
             {
-                Console.WriteLine("Enter a name:");
-                name = Console.ReadLine();
-                Console.WriteLine("Enter number of Lemons:");
-                numberOfLemons = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Enter number of Sugar Cubes:");
-                numberOfSugarCubes = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Enter number of Ice Cubes:");
-                numberOfIceCubes = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Enter a price:");
-                price = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("\nYou'd you like to change your recipe? Y/N");
+                answer = Console.ReadLine();
+                if (answer == "Y")
+                {
+                    Console.WriteLine("Enter a name:");
+                    name = Console.ReadLine();
+                    if (name == "")
+                    {
+                        name = "Secret Drink";
+                    }
 
-                Console.WriteLine("\nSuccessfuly saved");
-                DisplayRecipe();
-            }
-            else if (answer == "N")
-            {
+                    while (true)
+                    {
+                        try
+                        {
+                            Console.WriteLine("Enter number of Lemons: (or 0 to cancel)");
+                            numberOfLemons = Convert.ToInt32(Console.ReadLine());
 
-            }
-            else
-            {
-                Console.WriteLine("Invalid input");
+                            if (numberOfLemons >= 0)
+                            {
+                                break;
+                            }
+                        }
+                        catch (Exception)
+                        {
+                        }
+                    }
+
+                    while (true)
+                    {
+                        try
+                        {
+                            Console.WriteLine("Enter number of Sugar Cubes: (or 0 to cancel)");
+                            numberOfSugarCubes = Convert.ToInt32(Console.ReadLine());
+
+                            if (numberOfSugarCubes >= 0)
+                            {
+                                break;
+                            }
+                        }
+                        catch (Exception)
+                        {
+                        }
+                    }
+
+                    while (true)
+                    {
+                        try
+                        {
+                            Console.WriteLine("Enter number of Ice Cubes: (or 0 to cancel)");
+                            numberOfIceCubes = Convert.ToInt32(Console.ReadLine());
+
+                            if (numberOfIceCubes >= 0)
+                            {
+                                break;
+                            }
+                        }
+                        catch (Exception)
+                        {
+                        }
+                    }
+
+                    while (true)
+                    {
+                        try
+                        {
+                            Console.WriteLine("Enter a price:");
+                            price = Convert.ToInt32(Console.ReadLine());
+                            
+                            if(price > 0)
+                            {
+                                break;
+                            }
+                        }
+                        catch (Exception)
+                        {
+                        }
+                    }
+
+                    Console.WriteLine("\nSuccessfuly saved");
+                    DisplayRecipe();
+
+                    break;
+                }
+                else if (answer == "N")
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid input");
+                }
             }
         }
     }

@@ -94,12 +94,10 @@ namespace LemonadeStand
             Console.WriteLine($"\nToday weather was {days[currentDay - 1].weather.condition}, temperature {days[currentDay - 1].weather.temperature} ");
         }
 
-        public void DisplayProfitLoss()// hsould have Player player in here in case we have to players
+        public void DisplayProfitLoss()// hsould have Player player in here in case we have two players
         {
             Console.WriteLine($"\nDay {currentDay} is over! You sold {player.drinksSold} cups, which brought in ${player.drinksSold * player.recipe.price}");
         }
-
-
 
         public void GameResuts()
         {
@@ -120,7 +118,7 @@ namespace LemonadeStand
 
                 player.recipe.DisplayRecipe();
                 player.recipe.ChangeRecipe();
-
+                
                 player.MakeAPitcher(UserInterface.GetNumberOfPitchers());
 
                 WeatherChanger();
